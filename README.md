@@ -1,2 +1,7 @@
+
 # Actividad-5.-Taller-Comprendiendo-las-Estructuras-repetitivas
 El repositorio contiene una colección de algoritmos diseñados para procesar conjuntos de datos dinámicos. Cada solución incluye la definición de variables y la implementación de lógica repetitiva para automatizar tareas que van desde cálculos matemáticos básicos hasta sistemas de nómina empresarial.
+Retos Implementados:Análisis Numérico: Desarrollo de algoritmos para suma de impares, cálculo de potencias, raíces y detección de números primos.Estadística Aplicada: Implementación de fórmulas para la desviación típica, promedios de temperatura y gestión de calificaciones académicas.Lógica de Negocios:Gestión de Nómina: Cálculo automatizado de salarios, subsidios familiares y retenciones legales basadas en condiciones múltiples de ingresos y número de hijos.Sistema de Fumigación: Liquidación de servicios con descuentos cruzados por superficie (hectáreas) y por montos superiores a límites establecidos.Geometría Computacional: Aplicación del Teorema de Pitágoras para la detección automática de triángulos rectángulos en ternas de datos.
+🛠️ Requerimientos TécnicosLenguaje: Python 3.10+Conceptos clave: Ciclos for, bucles while, estructuras condicionales anidadas, manejo de listas y operaciones aritméticas de precisión.
+👤 Autores: Daniel Felipe Jimenez Pinto y Valery Sofia Espitia Rodriguez 
+Contexto: Estudiante de Primer Semestre de Ciencia de Datos.
