@@ -1,0 +1,128 @@
+# Ejercicio 1 
+n = int(input("Ingrese un número entero positivo N: "))
+suma = 0
+for i in range(1, n + 1):
+    if i % 2 != 0:
+        suma += i
+print(f"La suma de los números impares hasta {n} es: {suma}")
+/////////////////////////////////////////////////////////////////////////
+# ejercicio 2 
+import math
+
+n = int(input("Cantidad de datos a ingresar: "))
+datos = []
+for i in range(n):
+    valor = float(input(f"Ingrese el dato {i+1}: "))
+    datos.append(valor)
+
+promedio = sum(datos) / n
+suma_cuadrados = sum((x - promedio)**2 for x in datos)
+desviacion = math.sqrt(suma_cuadrados / n)
+
+print(f"La desviación típica es: {desviacion:.2f}")
+//////////////////////////////////////////////////////////////////////////
+
+# ejercico 3 
+while True:
+    num = float(input("Ingrese un número positivo (o 0 para salir): "))
+    if num <= 0: break
+    
+    print(f"Raíz: {math.sqrt(num):.2f}")
+    print(f"Cuadrado: {num**2}")
+    print(f"Cubo: {num**3}")
+///////////////////////////////////////////////////////////////////////////
+
+# ejercico 4
+n = int(input("¿Cuántos datos ingresará?: "))
+datos = []
+for i in range(n):
+    datos.append(float(input(f"Dato {i+1}: ")))
+
+maximo = max(datos)
+minimo = min(datos)
+print(f"Suma de {maximo} + {minimo} = {maximo + minimo}")
+///////////////////////////////////////////////////////////////////////////
+# Ejercicio 5
+n = int(input("¿Cuántas ternas desea evaluar?: "))
+contador = 0
+for i in range(n):
+    print(f"Terna {i+1}:")
+    lados = sorted([float(input("Lado 1: ")), float(input("Lado 2: ")), float(input("Lado 3: "))])
+    # Teorema de Pitágoras: a^2 + b^2 = c^2 (c es el más largo)
+    if lados[0]**2 + lados[1]**2 == lados[2]**2:
+        contador += 1
+print(f"Total de triángulos rectángulos: {contador}")
+///////////////////////////////////////////////////////////////////////////
+# ejercixio 6 
+Ewhile input("¿Procesar empleado? (s/n): ").lower() == 's':
+    hijos = int(input("Número de hijos: "))
+    v_hora = float(input("Valor hora: "))
+    horas = float(input("Horas trabajadas: "))
+    
+    salario = v_hora * horas
+    if salario < 300000:
+        retencion = 0 if hijos > 6 else salario * ((6 - hijos) / 2 / 100)
+    else:
+        retencion = salario * 0.03 if hijos < 3 else salario * (10 / hijos / 100)
+        
+    subsidio = hijos * 1200
+    print(f"Total a pagar: {salario - retencion + subsidio}")
+////////////////////////////////////////////////////////////////////////////////
+# ejercico 7
+nombre = input("Nombre del granjero: ")
+tipo = int(input("Tipo de fumigación (1-4): "))
+area = float(input("Hectáreas: "))
+
+precios = {1: 10, 2: 15, 3: 20, 4: 30}
+total = area * precios[tipo]
+
+if area > 1000: total *= 0.95
+if total > 3000:
+    total = 3000 + (total - 3000) * 0.90
+
+print(f"Granjero: {nombre} | Total: ${total:.2f}")
+///////////////////////////////////////////////////////////////////////////////////
+# ejercico 8 
+temps = []
+for i in range(30):
+    temps.append(float(input(f"Día {i+1}: ")))
+
+prom = sum(temps) / 30
+arriba = len([t for t in temps if t > prom])
+abajo = len([t for t in temps if t < prom])
+
+print(f"Promedio: {prom:.1f} | Max: {max(temps)} | Min: {min(temps)}")
+print(f"Días sobre el promedio: {arriba} | Días bajo: {abajo}")
+///////////////////////////////////////////////////////////////////////////////////////////
+# ejercico 9
+num = int(input("Número decimal: "))
+base = int(input("Base destino (2-16): "))
+digitos = "0123456789ABCDEF"
+res = ""
+
+while num > 0:
+    res = digitos[num % base] + res
+    num //= base
+
+print(f"Resultado: {res}")
+////////////////////////////////////////////////////////////////////////////////////////////
+# ejercico 10
+m = int(input("Ingrese M: "))
+primos = []
+
+for n in range(2, m + 1):
+    if all(n % i != 0 for i in range(2, int(n**0.5) + 1)):
+        primos.append(n)
+
+print(f"Primos: {primos}")
+print(f"Suma: {sum(primos)} | Total: {len(primos)}")
+////////////////////////////////////////////////////////////////////////////////////////////
+# ejercico 11
+n = int(input("Número de estudiantes: "))
+notas = [float(input(f"Nota {i+1}: ")) for i in range(n)]
+
+aprobados = len([n for n in notas if n >= 60])
+print(f"Promedio: {sum(notas)/n:.1f}")
+print(f"Aprobados: {aprobados} | Reprobados: {n - aprobados}")
+print(f"Máxima: {max(notas)} | Mínima: {min(notas)}")
+/////////////////////////////////////////////////////////////////////////////////////////////
